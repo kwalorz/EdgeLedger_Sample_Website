@@ -1,0 +1,85 @@
+#what .items {
+  display: block;/*makes icons and text stack on top of each other*/
+  padding: 1rem;
+}
+
+
+/* Align Icon to Left */
+#what .items .item {
+  display: flex;
+  text-align: left;
+}
+
+/* position icon */
+#what .items .item i {
+  margin-right: 1.3rem;/*puts some space between icon and text*/
+  align-self: center; /*puts icon back into circle background*/
+  margin-bottom: 0; /*moves icons back down a little*/
+}
+
+/* Smartphones */
+@media(max-width: 500px) {
+  #navbar {
+    flex-direction: column; /*takes logo and menu and stacks them in a column over one another*/
+    align-items: center;
+    position: sticky;
+  }
+
+
+  #navbar .logo {
+    margin-bottom: 0.5rem;/*seperates logo from menu items*/
+    text-align: center;
+  }
+
+  #navbar ul {
+    padding: 0.5rem;
+  }
+
+  #showcase .showcase-content {
+    top: 110px;/*brings the showcase up to the navbar in smartphone view*/
+    
+  }
+
+  #who {
+    display: block;/*no need for flex boxes if image is gone*/
+  }
+
+  #who .who-img {
+    display: none;/*takes away the image in smartphone view*/
+  }
+
+  #clients .items img {
+    width: 80%; /*makes client icons larger*/
+  }
+
+  #clients .items div:last-child {
+    display: none;/*removes the last client icon*/
+  }
+
+  #contact {
+    flex-direction: column; /*stacks map and contact form on top of another*/
+  }
+
+  #contact .map {
+    height: 400px; /*can't see map without adjusting height*/
+    border-top: 4px solid #333;/*creates a small border dividing form and map*/
+  }
+
+}
+
+/* makes site responsive to smaller screens like iphone5 */
+@media(max-height: 568px) {
+  #showcase .showcase-content {
+    margin-top: -2rem;
+    top: 140
+     /*moves the content together so its all above the fold when the page opens*/
+  }
+  
+  .l-heading {
+    font-size: 3rem;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+}

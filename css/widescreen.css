@@ -1,0 +1,16 @@
+/* Align Icon to Left */
+#what .items .item {
+  display: flex;
+  text-align: left;
+}
+
+/* position icon */
+#what .items .item i {
+  margin-right: 1.3rem;/*puts some space between icon and text*/
+  align-self: center; /*puts icon back into circle background*/
+  margin-bottom: 0; /*moves icons back down a little*/
+}
+
+#contact .map {
+  flex: 2;
+}

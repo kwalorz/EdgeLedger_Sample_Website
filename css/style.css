@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;/*seperates the lines a little bit*/
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0.75rem 0;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1100px;
+  margin: auto;/*aligns everything in the middle*/
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.text-center {
+text-align: center;
+}
+
+
+.text-primary {
+  color: #93cb52;
+}
+
+.bg-light {
+  background: #f4f4f4;
+  color: #333333;
+}
+
+.bg-dark {
+  background: #333333;
+  color: #ffffff;
+
+}
+
+.bg-primary {
+  background: #93cb52;
+  color: #ffffff;
+}
+
+.l-heading {
+  font-size: 4rem;
+  margin-bottom: 0.75rem;/*seperates heading from p*/
+  line-height: 1.1;/*puts a little spacing*/
+}
+
+.m-heading {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.1;
+}
+
+.lead {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;/*seperates text more from button*/
+}
+
+/*Padding for top/bottom*/
+.py-1 {padding: 1.5rem 0;}
+.py-2 {padding: 2rem 0;}
+.py-3 {padding: 3rem 0;}
+
+/*padding all sides*/
+.p-1 {padding: 1.5rem;}
+.p-2 {padding: 2rem;}
+.p-3 {padding: 3rem;}
+
+
+.btn {
+  display: inline-block;
+  color: #ffffff;
+  background: #93cb52;
+  padding: 0.5rem 2rem;
+  border: none;/*if you add this class to a button/not a link you want remove borders*/
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background: #7ab436;
+}
+
+.btn-dark {
+  background: #333333;
+  color: white;
+}
+
+.list {
+  margin: 0.5rem 0;/*seperates from heading*/
+  list-style: none /*takes away bullets*/
+}
+
+.list li {
+  padding: 0.5rem 0;/*seperates list items a little bit*/
+  border-bottom: #444 dotted 1px; /*creates speration lines between list items*/
+}
+
+/* Navbar */
+
+#navbar {
+  display: flex;/*every child element is affected*/
+  position: sticky;
+  top: 0;/*this tells the browser where you want navbar to stick*/
+  background: #333333;
+  color: #ffffff;
+  justify-content: space-between;/*spaces out content to opposite sides horizontally(justify-content)*/
+  z-index: 1;/*z-index dictates layers and which layer is in front. In this case you want the menu to always be seen*/
+  padding: 1rem; /*puts space between navbar content and top of browser*/
+}
+
+
+  
+
+#navbar ul {
+  display: flex;/*displays menu items horizontally*/
+  align-items: center;
+  list-style: none;
+}
+
+#navbar ul li a {
+  color: #ffffff;
+  padding: 0.75rem;/*seperates menu links*/
+  margin: 0.25rem;
+}
+
+#navbar ul li a:hover {
+  background: #93cb52;
+  border-radius: 5px;
+}
+
+/* Showcase */
+#showcase {
+  background: #333333 url('../img/showcase.jpg') no-repeat center center/cover;
+  height: 100vh;
+  color: #ffffff;
+ 
+}
+
+#showcase .showcase-content {
+  display: flex;
+  flex-direction: column; /*reverts the flex boxes back to columns instead of rows*/
+  text-align: center;
+  justify-content: center;
+  align-items: center;/*need height to make this work*/
+  height: 100%;
+  padding: 0 2rem;/*brings content away from the sides a bit*/
+  /* overlay */
+  position: absolute;
+  top: 65px;/* the exact number of px in the navbar. this brings the overlay right to that cutoff point for most browsers*/
+  /* 65px is the cutoff point in safari */
+  left: 0;/*brings overlay to the left edge*/
+  right: 0;/*brings overlay to the right edge*/
+  bottom: 0;/*brings overlay to the bottom edge*/
+  background-color: rgba(0,0,0,0.4);
+  /*the a stands for alpha, it dictates the transparency. values 0-1(1=no transparency). The 3 zeros create the color black. This doesn't effect text. Oppacity would effect the text*/
+}
+
+/* Section: What We Do */
+
+.items {
+  display: flex;
+}
+
+#what .items .item {
+  flex: 1;
+  text-align: center;
+  padding: 1rem;/*speads things out a bit*/
+}
+
+#what .items .item i {
+  background: #93cb52;
+  padding: 1rem; /*enlarges background*/
+  border-radius: 50%;/*creates circle background*/
+  margin-bottom: 1rem; /*pushes heading down away from icon*/
+}
+
+/* Section: Who We Are */
+#who {
+  display: flex;
+}
+
+#who div {
+  flex: 1;
+}
+
+#who .who-img {
+  background: url('../img/people.jpg') no-repeat center center/cover;
+}
+
+/* Section: Clients */
+#clients .items {
+  display: flex;
+}
+
+#clients .items img {
+  display: block;/*allows you to add widths to the items*/
+  margin:auto;/*centers images*/
+  width: 60%;/*makes images smaller, 60% of actual container*/
+}
+
+/* Section: Contact */
+#contact {
+  display: flex;
+}
+
+#contact .map, #contact .contact-form {
+  flex: 1;/*divides map and contact form evenly*/
+}
+
+#contact .contact-form .form-group {
+  margin: 0.75rem;/*seperates the elements of the forma bit*/
+}
+
+#contact .contact-form label {
+  display: block;/*puts labels above the inputs. normally labels are inline(to the left of the input)*/
+}
+
+#contact .contact-form input, 
+#contact .contact-form textarea {
+width: 100%;/*takes text area and inputs across entire area of the flex box*/
+padding: 0.5rem;
+}
